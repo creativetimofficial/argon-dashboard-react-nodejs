@@ -23,6 +23,7 @@ const passport = require('passport');
 const mongoose = require('mongoose');
 const compression = require('compression');
 const https = require('https');
+const http = require('http');
 const fs = require('fs');
 const cors = require('cors');
 const path = require('path');
@@ -54,7 +55,6 @@ mongoose
 
 app.use(cors());
 
-app.use(requireHTTPS);
 
 
 // Express body parser
@@ -82,13 +82,32 @@ const tokensCleanUp = new CronJob('10 3 * * *', function() {
 tokensCleanUp.start();
 
 const PORT = process.env.PORT;
-https.createServer({
-  key: fs.readFileSync(process.env.SSLKEY),
-  cert: fs.readFileSync(process.env.SSLCERT),
+
+
+http.createServer({
 }, app)
     .listen(PORT, function() {
-      console.log('App listening on port ' + PORT + '! Go to https://localhost:' + PORT + '/');
+      console.log('App listening on port ' + PORT + '! Go to http://localhost:' + PORT + '/');
     });
+
+
+
+// FOR HTTPS ONLY
+// https.createServer({
+//   key: fs.readFileSync(process.env.SSLKEY),
+//   cert: fs.readFileSync(process.env.SSLCERT),
+// }, app)
+//     .listen(PORT, function() {
+//       console.log('App listening on port ' + PORT + '! Go to https://localhost:' + PORT + '/');
+//     });
+// app.use(requireHTTPS); FOR HTTPS
+// app.enable('trust proxy');
+// app.use(function(req, res, next) {
+//   if (req.secure) {
+//     return next();
+//   }
+//   res.redirect('https://' + req.headers.host + req.url);
+// });
 
 /**
  * @param {int} req req.
@@ -102,11 +121,3 @@ function requireHTTPS(req, res, next) {
   }
   next();
 }
-
-app.enable('trust proxy');
-app.use(function(req, res, next) {
-  if (req.secure) {
-    return next();
-  }
-  res.redirect('https://' + req.headers.host + req.url);
-});
