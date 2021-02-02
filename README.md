@@ -55,15 +55,17 @@ If you want to get inspiration or just show something directly to your clients, 
 
 ## Quick start
 
-- `npm i argon-dashboard-react`
-- [Download from Github](https://github.com/creativetimofficial/argon-dashboard-react/archive/master.zip).
+- assume you have npm and Mongo DB installed
+- [Download from Github](https://github.com/creativetimofficial/argon-dashboard-react-nodejs).
 - [Download from Creative Tim](https://www.creative-tim.com/product/argon-dashboard-react?ref=adr-github-readme).
-- Install with [Bower](https://bower.io/?ref=creativetim): ```bower install argon-dashboard-react```.
-- Clone the repo: `git clone https://github.com/creativetimofficial/argon-dashboard-react.git`.
+- Clone the repo: `git clone https://github.com/creativetimofficial/argon-dashboard-react-nodejs`.
+- `npm install` in both front-end and back-end folder
+- `npm run build` in front-end folder and then move the build folder in back-end -> this is for production mode
+- `nodemon` in backend folder and the server will start
 
 
 ## Documentation
-The documentation for the Material Kit is hosted at our [website](https://demos.creative-tim.com/argon-dashboard-react/#/documentation/quick-start-nodejs).
+The documentation for the Argon Dashboard React with Node JS is hosted at our [website](https://demos.creative-tim.com/argon-dashboard-react/#/documentation/quick-start-nodejs).
 
 
 ## File Structure
@@ -228,16 +230,16 @@ At present, we officially aim to support the last two versions of the following 
 
 ## Reporting Issues
 
-We use GitHub Issues as the official bug tracker for the Material Kit. Here are some advices for our users that want to report an issue:
+We use GitHub Issues as the official bug tracker for the Argon Dashboard React with Node JS. Here are some advices for our users that want to report an issue:
 
-1. Make sure that you are using the latest version of the Material Kit. Check the CHANGELOG from your dashboard on our [website](https://www.creative-tim.com/?ref=adr-github-readme).
+1. Make sure that you are using the latest version of the Argon Dashboard React with Node JS. Check the CHANGELOG from your dashboard on our [website](https://www.creative-tim.com/?ref=adr-github-readme).
 2. Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.
 3. Some issues may be browser specific, so specifying in what browser you encountered the issue might help.
 
 ## Licensing
 
 - Copyright 2021 Creative Tim (https://www.creative-tim.com/?ref=adr-github-readme)
-- Copyright 2021 Creative Tim (https://projectdata.dev/?fbclid=IwAR3NJsoVcZFDi00KyXtjCMv5vhM3CCx9nxkqcidKUJL6ajc6mtY6OwIfXiU)
+- Copyright 2021 ProjectData (https://projectdata.dev)
 - Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard-react/blob/master/LICENSE.md?ref=creativetim)
 
 ## Useful Links
