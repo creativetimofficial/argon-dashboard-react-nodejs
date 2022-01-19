@@ -1,7 +1,7 @@
 <!--
  IMPORTANT: Please use the following link to create a new issue:
 
-  https://www.creative-tim.com/new-issue/argon-dashboard-react
+  https://www.creative-tim.com/new-issue/argon-dashboard-react-nodejs
 
 **If your issue was not created using the app above, it will be closed immediately.**
 -->
